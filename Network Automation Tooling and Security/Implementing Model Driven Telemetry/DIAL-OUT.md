@@ -4,7 +4,7 @@
 We are going to work with transport protocol GRPC, dial-out work with encoding format kvGPB in the router CSR-XE 1000V.
 the type stream that is supported is yang-push.
 
-
+![Alt text](image-2.png)
 
 Login to Cisco Devenet Sandbox.
 

@@ -1,4 +1,4 @@
-# INSTALL GRAFANA
+# Install Grafana
 
 ![Alt text](image.png)
 

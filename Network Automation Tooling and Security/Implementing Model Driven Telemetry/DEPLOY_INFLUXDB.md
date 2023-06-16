@@ -1,6 +1,8 @@
 # Install InfluxDB
 
-Following thouse steps to complete the instalation:
+![Alt text](image-49.png)
+
+Following these steps to complete the instalation:
 
 ```bash
 [opc@web-server telegraf]$ cat <<EOF | sudo tee /etc/yum.repos.d/influxdata.repo
@@ -17,39 +19,36 @@ baseurl = https://repos.influxdata.com/stable/$basearch/main
 enabled = 1
 gpgcheck = 1
 gpgkey = https://repos.influxdata.com/influxdata-archive_compat.key
-[opc@web-server telegraf]$ 
-[opc@web-server telegraf]$ 
-[opc@web-server telegraf]$ 
-[opc@web-server telegraf]$ 
-[opc@web-server telegraf]$ 
-[opc@web-server telegraf]$ 
-[opc@web-server telegraf]$ 
+```
+
+```bash
 [opc@web-server telegraf]$ sudo yum install influxdb2
+```
+
+```bash
 InfluxData Repository - Stable                                                                               227 kB/s |  51 kB     00:00    
 Dependencies resolved.
-=============================================================================================================================================
- Package                           Architecture                   Version                           Repository                          Size
-=============================================================================================================================================
-Installing:
+========================================================================================================== Package                           Architecture                   Version                           Repository                          Size
+==========================================================================================================Installing:
  influxdb2                         x86_64                         2.7.1-1                           influxdata                          44 M
 
 Transaction Summary
-=============================================================================================================================================
-Install  1 Package
+==========================================================================================================Install  1 Package
 
 Total download size: 44 M
 Installed size: 99 M
 Is this ok [y/N]: y
 Downloading Packages:
 influxdb2-2.7.1.x86_64.rpm                                                                                    22 MB/s |  44 MB     00:01    
----------------------------------------------------------------------------------------------------------------------------------------------
-Total                                                                                                         22 MB/s |  44 MB     00:01     
+----------------------------------------------------------------------------------------------------------Total                                                                                                         22 MB/s |  44 MB     00:01     
 InfluxData Repository - Stable                                                                                14 kB/s | 1.6 kB     00:00    
 Importing GPG key 0x7DF8B07E:
  Userid     : "InfluxData Package Signing Key <support@influxdata.com>"
  Fingerprint: 9D53 9D90 D332 8DC7 D6C8 D3B9 D8FF 8E1F 7DF8 B07E
  From       : https://repos.influxdata.com/influxdata-archive_compat.key
+
 Is this ok [y/N]: y
+
 Key imported successfully
 Running transaction check
 Transaction check succeeded.
@@ -82,6 +81,29 @@ success
 success
 ```
 
+```bash
+[opc@web-server]$ sudo systemctl restart influxdb
+```
+
+```bash
+[opc@web-server]$ sudo systemctl enable influxdb
+```
+
+```bash
+[opc@web-server]$ sudo systemctl status influxdb
+
+● influxdb.service - InfluxDB is an open-source, distributed, time series database
+   Loaded: loaded (/usr/lib/systemd/system/influxdb.service; enabled; vendor preset: disabled)
+   Active: active (running) since Mon 2023-06-12 14:12:24 GMT; 3 days ago
+     Docs: https://docs.influxdata.com/influxdb/
+ Main PID: 2239 (influxd)
+    Tasks: 11 (limit: 5531)
+   Memory: 167.7M
+   CGroup: /system.slice/influxdb.service
+           └─2239 /usr/bin/influxd
+
+```
+
 ![Alt text](image-6.png)
 
 + Create Data Base in Influxb:
@@ -91,13 +113,3 @@ success
 ![Alt text](image-8.png)
 
 
-Install CLI Influxdb
-
-# amd64
-wget https://dl.influxdata.com/influxdb/releases/influxdb2-client-2.7.3-linux-amd64.tar.gz
-
-# amd64
-tar xvzf path/to/influxdb2-client-2.7.3-linux-amd64.tar.gz
-
-# amd64
-sudo cp influxdb2-client-2.7.3-linux-amd64/influx /usr/local/bin/

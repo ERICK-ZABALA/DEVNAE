@@ -6,7 +6,7 @@ At this point you have installed all the services like grafana, telegraf and inf
 
 + Go Home > Administration > Data Source
 
-![Alt text](image-10.png)
+![Alt text](image-78.png)
 
 + Select Influxdb
 

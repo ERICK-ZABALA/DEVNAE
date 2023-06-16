@@ -1,5 +1,7 @@
 # INSTALL CSR1000V IN WORKSTATION VMWARE
 
+![Alt text](image-79.png)
+
 Previous this instalation you need to have your workstation instaled in your laptop. Download the image csr1000v-unversalk9.17.03.02.iso and csr1000v-unversalk9.17.03.02-vga.ovf in the site www.cisco.com.
 
 ![Alt text](image-21.png)

@@ -2,7 +2,9 @@
 
 ![Alt text](image-79.png)
 
-Previous this instalation you need to have your workstation instaled in your laptop. Download the image csr1000v-unversalk9.17.03.02.iso and csr1000v-unversalk9.17.03.02-vga.ovf in the site www.cisco.com.
+Previous this instalation you need to have your workstation instaled in your laptop. Download the image csr1000v-unversalk9.17.03.02.iso and csr1000v-unversalk9.17.03.02-vga.ovf in the oficial site www.cisco.com.
+
+Model-Driven Telemetry gRPC Dial-Out support in Cisco IOS XE Gibraltar 16.10.1 or Cisco IOS XE Gibraltar 16.11.1 ![MDT](https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/prog/configuration/173/b_173_programmability_cg/model_driven_telemetry.html)
 
 ![Alt text](image-21.png)
 
@@ -40,10 +42,11 @@ Execute Stop the process
 ![Alt text](image-31.png)
 
 Select > Power Off
+
 In this section, you need to modify the configuration.
 Modify Network Adapter: VMnet1
-RAM:4GB
-CD/DVD: select image.iso
+RAM:4GB (this parameter is important!!!)
+CD/DVD: select csr1000v-unversalk9.17.03.02.iso.iso
 
 ![Alt text](image-32.png)
 
@@ -55,15 +58,13 @@ Select > csr1000-universal-xxx.iso
 
 ![Alt text](image-35.png)
 
-![Alt text](image-36.png)
-
 ![Alt text](image-37.png)
 
 ![Alt text](image-38.png)
 
 ![Alt text](image-39.png)
 
-Second reboot de cd/DVD is turn off automatically.
+Second reboot de CD/DVD is turn off automatically.
 
 ![Alt text](image-40.png)
 
@@ -83,4 +84,5 @@ Press Enter
 
 ![Alt text](image-47.png)
 
-![Alt text](image-48.png)
+![Alt text](image-80.png)
+

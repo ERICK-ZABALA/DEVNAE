@@ -100,6 +100,18 @@ Add this commands:
   username = "telegraf"
   password = "password123"
 
+[[inputs.cisco_telemetry_mdt]]
+ transport = "grpc"
+ service_address = ":57000"
+
+
+[[outputs.influxdb_v2]]
+  urls = [ "http://127.0.0.1:8086" ]
+  token = "$INFLUX_TOKEN"
+  organization = "IS"
+  bucket = "telegraf"
+
+  
 ![Alt text](image-5.png)
 
 [opc@web-server telegraf]$ sudo firewall-cmd --zone=public --permanent --add-port=57000/tcp

@@ -90,3 +90,14 @@ success
 
 ![Alt text](image-8.png)
 
+
+Install CLI Influxdb
+
+# amd64
+wget https://dl.influxdata.com/influxdb/releases/influxdb2-client-2.7.3-linux-amd64.tar.gz
+
+# amd64
+tar xvzf path/to/influxdb2-client-2.7.3-linux-amd64.tar.gz
+
+# amd64
+sudo cp influxdb2-client-2.7.3-linux-amd64/influx /usr/local/bin/

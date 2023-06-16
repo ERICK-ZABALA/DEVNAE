@@ -79,6 +79,51 @@ Router operating mode: Autonomous
 Configuration register is 0x2102
 ```
 
+# Model Driven Telemetry 
+
+MDT requires pre-requirements YANG (netconf-yang), XML XPath, capability hello msg urn:ietf:params:netconf:capability:notification:1.1
+
++ to verify the process in your gateway use this command.
+
+```yaml
+show platform software yang-management process
+```
+
++ to verify capability you can make a ssh session from your putty.
+
+
+ssh -s username@core –p 830 netconf
+
+# Check the hello Message 
+
+```yaml
+<capability>
+urn:ietf:params:netconf:capability:notification:1.1
+```
+
+```yaml
+output:
+login as: devnet
+devnet@192.168.0.21's password:
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<capabilities>
+<capability>urn:ietf:params:netconf:base:1.0</capability>
+<capability>urn:ietf:params:netconf:base:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability                      >
+<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:validate:1.1</capability>
+<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:notification:1.0</capability>
+<capability>urn:ietf:params:netconf:capability:interleave:1.0</capability>
+```
+
+You can see in the document capability_ssh.txt.
+
+
+
+
 Then you need to configure Telemetry in the device Cat8000V.
 
 ```yaml

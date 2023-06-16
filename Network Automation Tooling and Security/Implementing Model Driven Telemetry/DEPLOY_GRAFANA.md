@@ -32,7 +32,7 @@ sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 ```
 
-Install grafana in your device.
++ Install grafana in your device.
 
 ```bash
 [opc@web-server yum.repos.d]$ sudo yum install grafana
@@ -82,11 +82,11 @@ success
 [opc@web-server yum.repos.d]$ sudo firewall-cmd --reload
 success
 ```
-Open port 3000 as well in your firewall.
++ Open port 3000 as well in your firewall.
 
 ![Alt text](image-1.png)
 
-Validate you service is up in your server.
++ Validate you service is up in your server.
 
 ```bash
 [opc@web-server yum.repos.d]$ sudo systemctl status grafana-server

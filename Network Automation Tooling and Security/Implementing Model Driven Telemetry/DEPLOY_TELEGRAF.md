@@ -1,5 +1,7 @@
 # Install Telegraf
 
+![Alt text](image-83.png)
+
 Explore web site https://portal.influxdata.com/downloads/
 
 Then search Telegraf Open Source and copie the SHA256.

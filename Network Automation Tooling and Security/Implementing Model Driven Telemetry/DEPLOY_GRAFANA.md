@@ -31,6 +31,7 @@ gpgkey=https://rpm.grafana.com/gpg.key
 sslverify=1
 sslcacert=/etc/pki/tls/certs/ca-bundle.crt
 ```
+
 Install grafana in your device.
 
 ```bash
@@ -47,12 +48,18 @@ grafana                                                                         
 
 Complete!
 ```
-Enable grafana service.
+
++ Enable grafana service.
 
 ```bash
 [opc@web-server yum.repos.d]$ sudo systemctl start grafana-server
-[opc@web-server yum.repos.d]$ sudo systemctl enable grafana-server
+```
 
+```bash
+[opc@web-server yum.repos.d]$ sudo systemctl enable grafana-server
+```
+
+```bash
 Synchronizing state of grafana-server.service with SysV service script with /usr/lib/systemd/systemd-sysv-install.
 Executing: /usr/lib/systemd/systemd-sysv-install enable grafana-server
 Created symlink /etc/systemd/system/multi-user.target.wants/grafana-server.service → /usr/lib/systemd/system/grafana-server.service.
@@ -83,6 +90,9 @@ Validate you service is up in your server.
 
 ```bash
 [opc@web-server yum.repos.d]$ sudo systemctl status grafana-server
+```
+
+```bash
 ● grafana-server.service - Grafana instance
    Loaded: loaded (/usr/lib/systemd/system/grafana-server.service; enabled; vendor preset: disabled)
    Active: active (running) since Sun 2023-06-11 03:19:59 GMT; 19min ago
@@ -93,12 +103,13 @@ Validate you service is up in your server.
    CGroup: /system.slice/grafana-server.service
            └─2585692 /usr/share/grafana/bin/grafana server --config=/etc/grafana/grafana.ini --pidfile=/var/run/grafana/grafana-server.pid --packaging=rpm cfg:default.paths.logs=/va>
 ```
-Open your browser and go to grafana site: https://x.x.x.x:3000/
+
++ Open your browser and go to grafana site: https://x.x.x.x:3000/
 
 Those are credentials to login your grafana server.
 
-User: admin
-Pass: admin
+   Username: admin
+   Password (default): admin
 
 ![Alt text](image.png)
  

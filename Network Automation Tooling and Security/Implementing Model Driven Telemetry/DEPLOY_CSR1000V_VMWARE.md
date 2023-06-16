@@ -56,6 +56,8 @@ Select > csr1000-universal-xxx.iso
 
 ![Alt text](image-34.png)
 
+![Alt text](image-82.png)
+
 ![Alt text](image-35.png)
 
 ![Alt text](image-37.png)

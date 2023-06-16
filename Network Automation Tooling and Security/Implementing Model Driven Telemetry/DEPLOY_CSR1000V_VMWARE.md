@@ -88,3 +88,17 @@ Press Enter
 
 ![Alt text](image-80.png)
 
+
+```bash
+
+csr1000v# show platform software vnic-if interface-mapping
+--------------------------------------------------------------------------
+Interface Name             Driver Name               Mac Addr
+--------------------------------------------------------------------------
+GigabitEthernet3            vmxnet3                 000c.2946.3f4d
+GigabitEthernet2            vmxnet3                 0050.5689.0034
+GigabitEthernet1            vmxnet3                 0050.5689.000b
+GigabitEthernet0            vmxnet3                 000c.2946.3f4d
+--------------------------------------------------------------------------
+
+```

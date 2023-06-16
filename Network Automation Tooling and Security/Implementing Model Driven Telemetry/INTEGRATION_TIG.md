@@ -1,3 +1,7 @@
+# Integration TIG
+
+![https://developer.cisco.com/learning/labs/05-mdt-overview/model-driven-telemetry/](image-84.png)
+
 At this point you have installed all the services like grafana, telegraf and infludb.
 
 # Integration Influxd and Grafana
